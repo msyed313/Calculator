@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity,Pressable } from 'react-native';
 const App = () => {
   const [input, setInput] = useState('');
   const [result, setResult] = useState('');
@@ -55,9 +55,9 @@ const App = () => {
 }
 const Button = ({ value, onPress }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={() => onPress(value)}>
+    <Pressable style={styles.button} onPress={() => onPress(value)}>
       <Text style={styles.buttonText}>{value}</Text>
-    </TouchableOpacity>
+    </Pressable>
   );
 };
 const styles = StyleSheet.create({
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     fontWeight:'500'
   },
   resultText: {
-    color: 'black',
+    color: 'blue',
     fontSize: 40,
     marginTop: 10,
     fontWeight:'700'
